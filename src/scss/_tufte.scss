@@ -1,0 +1,203 @@
+
+.navbar {
+  padding: .5rem 0;
+  background-color: $brand-secondary;
+  font-size: $font-size-sm;
+  border-radius: 0;
+}
+
+.lead {
+  background-color: $brand-secondary;
+  color: #fafafa;
+  padding: 10rem 0 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.lead p {
+  margin-bottom: 0.5rem;
+}
+
+.lead span {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.tufte, .next, .cta {
+  font-family:  $font-family-serif;
+}
+
+.cta {
+  font-style: italic;
+  margin-top:2rem;
+}
+
+.next {
+  background-color: $brand-secondary;
+  color: $brand-invert;
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+.next p {
+  margin-bottom: 0.5rem;
+}
+
+.next h1 {
+  margin-bottom: 0;
+}
+
+#plus {
+    text-decoration: none;
+}
+
+.tufte {
+  font-family:  $font-family-serif;
+  counter-reset: reference-counter;
+}
+
+.tufte blockquote {
+  padding: 0.75rem 0;
+}
+
+.tufte blockquote p {
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.tufte blockquote footer {
+  font-size: $font-size-sm;
+  text-align: right;
+}
+
+.tufte h2 { padding-top: $font-size-h2/2; }
+.tufte h3 { padding-top: $font-size-h3/2; }
+.tufte h4 { padding-top: $font-size-h4/2; }
+
+.tufte img { max-width: 100%; }
+
+/*Figures*/
+.tufte figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 100%;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 1.75rem 0 3rem 0;
+}
+
+.tufte figcaption {
+  float: right;
+  clear: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  margin-right: 0%;
+  max-width: none;
+  font-size: $font-size-sm;
+  font-style: italic;
+  text-align: right;
+}
+
+/*references*/
+.reference, .note {
+  display: none;
+}
+
+label.reference-number { display: none; }
+
+.foot {
+    margin: 3rem 0;
+    font-size: $font-size-xs;
+    background-color: #fff;
+    text-align: center;
+}
+
+.foot a {
+    font-weight: 500;
+    color: #55595c
+}
+
+.foot a:hover {
+    color: #0275d8
+}
+
+.foot p {
+    margin-bottom: 0
+}
+
+.foot-links {
+    padding-left: 0;
+    margin-bottom: 1rem
+}
+
+.foot-links li {
+    display: inline-block
+}
+
+.foot-links li+li {
+    margin-left: 1rem
+}
+
+@include media-breakpoint-up(sm) {
+  .tufte blockquote p {
+    padding: 0 2rem;
+  }
+
+  .tufte blockquote footer {
+    padding: 0 3rem 0 6rem;
+  }
+
+  .foot {
+      text-align: left
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .tufte p, .tufte footer, .tufte pre, .tufte h1, .tufte h2, .tufte h3, .tufte figure { width: 65%; }
+  .tufte .fullwidth {
+    max-width: 100%; width: 100%; clear: both;
+  }
+
+  .reference, .note {
+    display: block;
+    float: right;
+    clear: right;
+    margin-right: -55%;
+    width: 45%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $font-size-sm;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+  }
+
+  .reference-number {
+    counter-increment: reference-counter;
+  }
+
+  .reference-number:after, .reference:before {
+    content: counter(reference-counter) " ";
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  .reference-number:after {
+    content: counter(reference-counter);
+    font-size: $font-size-sm;
+    top: -0.5rem;
+    left: 0.1rem;
+  }
+
+  .reference:before {
+    content: counter(reference-counter) " ";
+    top: -0.5rem;
+  }
+
+  label.reference-number { display: inline; }
+}
