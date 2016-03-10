@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 var package = 'public/';
 
 gulp.task('styles', function() {
-  gulp.src('./src/scss/**/*.scss')
+  gulp.src('./src/scss/**/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({basename: 'style', suffix: '.min'}))
